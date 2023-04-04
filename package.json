@@ -1,0 +1,27 @@
+{
+  "name": "react-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "npm run build && npm run dev:babel",
+    "dev:babel": "npx -p @babel/core -p @babel/node babel-node server",
+    "build": "esbuild client/index.jsx --bundle --outfile=server/public/bundle.js --minify --sourcemap --target=chrome58"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "esbuild": "^0.17.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
